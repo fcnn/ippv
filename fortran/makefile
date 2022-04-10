@@ -3,10 +3,10 @@ all: ippv
 ippv: main.o phone.o
 	gfortran -o $@ $^
 
-main.o: main.f08
-	gfortran -c $^
-phone.o: phone.f08
-	gfortran -c $^
+%.o: %.f08
+	gfortran --std=gnu -c $^
+#	gfortran --std=f2018 -c $^
+
 .PHONY: clean
 clean:
 	rm -f ippv *.o
