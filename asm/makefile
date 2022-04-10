@@ -1,6 +1,6 @@
 all: ippv
 
-ippv: main.o alg.o
+ippv: main.o core.o
 	$(CC) -o $@ $^
 
 %.o: %.asm
