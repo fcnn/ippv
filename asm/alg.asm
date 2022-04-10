@@ -46,7 +46,7 @@ insert:
 	call	printf WRT ..plt
 	ret
 
-# return: rsi: cc, rdx: ld, rcx: ac, r8: iso note: suitable for passing to printf directly
+; return: rsi: cc, rdx: ld, rcx: ac, r8: iso note: suitable for passing to printf directly
 match:
 	mov	rsi, 2
 	mov	rdx, 5
