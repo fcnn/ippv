@@ -9,4 +9,4 @@ ippv: core.o main.o
 
 .PHONY: clean
 clean:
-	rm -f ippv *.o
+	rm -f ippv *.o *.mod
