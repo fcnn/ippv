@@ -1,6 +1,6 @@
 all: ippv
 
-ippv: main.o phone.o
+ippv: core.o main.o
 	gfortran -o $@ $^
 
 %.o: %.f08

@@ -1,11 +1,12 @@
 program test
+use core
 interface
-    function parse()
-    end
-    function add_cc(cc,iso) result(res)
-        character(30) :: cc
-        character(3)  :: iso
-    end
+!    function parse()
+!    end
+!    function add_cc(cc,iso) result(res)
+!        character(30) :: cc
+!        character(3)  :: iso
+!    end
 end interface
     integer :: res
     character(3) :: ret
