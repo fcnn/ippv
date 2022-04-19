@@ -6,7 +6,23 @@ class Vector3D(var x:Double,var y:Double,var z:Double) {
     z /= m
 
   def magnitude:Double =
-    Math.sqrt(x*x+y*y+z*z)
+    //Math.sqrt(x*x+y*y+z*z)
+    Math.sqrt(x*x+z*z)
+
+  def scale(magnitude:Double) =
+    x *= magnitude
+    y *= magnitude
+    z *= magnitude
+
+  def add(v:Vector3D) =
+    x += v.x
+    y += v.y
+    z += v.z
+
+  def sub(v:Vector3D) =
+    x -= v.x
+    y -= v.y
+    z -= v.z
 
   def angle: Double =
     val angle = Math.acos(x / Math.sqrt(x*x+z*z))
@@ -26,4 +42,12 @@ class Vector3D(var x:Double,var y:Double,var z:Double) {
 
   override def clone: Vector3D =
     Vector3D(x,y,z)
+}
+
+object Vector3D {
+  def sub(v1:Vector3D,v2:Vector3D): Vector3D =
+    Vector3D(v1.x-v2.x,v1.y-v2.y,v1.z-v2.z)
+
+  def add(v1:Vector3D,v2:Vector3D): Vector3D =
+    Vector3D(v1.x+v2.x,v1.y+v2.y,v1.z+v2.z)
 }
