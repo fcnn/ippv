@@ -1,7 +1,10 @@
-val scala3Version = "3.1.1"
+val scala3Version = "3.1.2"
+
+//val playJson  = "com.typesafe.play" %% "play-json" % "2.9.2"
 
 lazy val root = project
   .in(file("."))
+  //.enablePlugins(JavaAppPackaging)
   .settings(
     name := "IPPV",
     version := "0.1.0-SNAPSHOT",
