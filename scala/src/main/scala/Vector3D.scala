@@ -9,17 +9,17 @@ class Vector3D(var x:Double,var y:Double,var z:Double) {
     //Math.sqrt(x*x+y*y+z*z)
     Math.sqrt(x*x+z*z)
 
-  def scale(magnitude:Double) =
+  def scale(magnitude:Double): Unit =
     x *= magnitude
     y *= magnitude
     z *= magnitude
 
-  def add(v:Vector3D) =
+  def add(v:Vector3D): Unit =
     x += v.x
     y += v.y
     z += v.z
 
-  def sub(v:Vector3D) =
+  def sub(v:Vector3D): Unit =
     x -= v.x
     y -= v.y
     z -= v.z
@@ -38,7 +38,7 @@ class Vector3D(var x:Double,var y:Double,var z:Double) {
     Vector3D(y*v.z-z*v.y,z*v.x-x*v.z,x*v.y-y*v.x)
 
   override def toString: String =
-    "("+x+','+y+'.'+z+")"
+    "("+x+','+y+','+z+")"
 
   override def clone: Vector3D =
     Vector3D(x,y,z)
