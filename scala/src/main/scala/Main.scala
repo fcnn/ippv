@@ -33,7 +33,7 @@ def run(startPoint:Vector3D,endPoint:Vector3D,direction:Vector3D,angle:Double,sp
   }
 }
 
-def checkAngle(src: Vector3D, dest: Vector3D, angle: Double,direction:Vector3D) = {
+def checkAngle(src: Vector3D, dest: Vector3D, angle: Double,direction:Vector3D): Unit = {
   val v1 = Vector3D(dest.x - src.x, 0, dest.z - src.z)
   val v0 = direction.clone
   v1.normalize
