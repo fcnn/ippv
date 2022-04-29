@@ -14,6 +14,9 @@ import System.currentTimeMillis
   run(startPoint,endPoint,direction,angle,speed,height)
 
 def run(startPoint:Vector3D,endPoint:Vector3D,direction:Vector3D,angle:Double,speed:Double,height:Double): Unit = {
+  val monster = MyGame.Monster()
+  monster.pos()
+
   val period = 200
   val width = speed * period/1000
   val src = startPoint.clone
