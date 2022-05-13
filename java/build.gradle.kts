@@ -13,12 +13,12 @@ plugins {
 group = "com.my"
 version = "0.0.1-SNAPSHOT"
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_18
+	targetCompatibility = JavaVersion.VERSION_18
 }
 
 tasks.withType<JavaCompile> {
-	options.release.set(17)
+	options.release.set(18)
 }
 
 repositories {
@@ -36,6 +36,6 @@ application {
 }
 
 tasks.wrapper {
-  gradleVersion = "7.4"
+  gradleVersion = "7.5-rc-1"
   distributionType = Wrapper.DistributionType.ALL
 }
