@@ -58,6 +58,6 @@ dependencies {
 }
 
 tasks.wrapper {
-	gradleVersion = "7.5-milestone-1"
+	gradleVersion = "7.5-rc-1"
 	distributionType = Wrapper.DistributionType.ALL
 }
