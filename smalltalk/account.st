@@ -31,11 +31,16 @@ Account class extend [
         ]
 ]
 
-Account comment printNl.
-
 a := Account new.
+
 a printNl.
 
-a deposit 100.
+a deposit: 100.
 a spend: 25 printNl.
 
+Account comment printNl.
+
+| name |
+Transcript show: 'Enter your name: '.
+name := stdin nextLine.
+Transcript show: ('Hello, ' , name, '!'); cr
