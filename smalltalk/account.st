@@ -11,6 +11,14 @@ Account extend [
                 <category: 'initialization'>
                 balance := 0
         ]
+	spend: amount [
+		<category: 'moving money'>
+		balance := balance - amount
+	]
+	deposit: amount [
+		<category: 'moving money'>
+		balance := balance + amount
+	]
 ]
 
 Account class extend [
@@ -23,8 +31,11 @@ Account class extend [
         ]
 ]
 
-a := Account new.
+Account comment printNl.
 
+a := Account new.
 a printNl.
 
-Account comment printNl.
+a deposit 100.
+a spend: 25 printNl.
+
