@@ -5,7 +5,7 @@ import System.currentTimeMillis
   println(msg)
   val startPoint = Vector3D(-4.9980955,0.15850002,-4.174668)
   val endPoint = Vector3D(-12.153134,0.12,-6.5270867)
-  val angle = 198.19972229003906;
+  val angle = 198.19972229003906
   val direction = Vector3D(-9.499735653862215,0.0,-3.123303140385034)
   val height = 2.52
   val speed = 18
@@ -14,8 +14,8 @@ import System.currentTimeMillis
   run(startPoint,endPoint,direction,angle,speed,height)
 
 def run(startPoint:Vector3D,endPoint:Vector3D,direction:Vector3D,angle:Double,speed:Double,height:Double): Unit = {
-  val monster = MyGame.Monster()
-  monster.pos()
+  //val monster = MyGame.Monster()
+  //monster.pos()
 
   val period = 200
   val width = speed * period/1000
