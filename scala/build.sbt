@@ -1,4 +1,4 @@
-val scala3Version = "3.2.1-RC1-bin-20220718-67f11ff-NIGHTLY"
+val scala3Version = "3.2.1-RC1-bin-20220719-56e9a93-NIGHTLY"
 //val scala3Version = "3.1.3"
 
 //val playJson  = "com.typesafe.play" %% "play-json" % "2.9.2"
