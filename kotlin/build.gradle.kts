@@ -20,26 +20,26 @@ plugins {
 	id("java")
 	id("application")
 	kotlin("jvm") version("${property("kotlinVersion")}")
-	id("io.spring.dependency-management") version("1.0.11.RELEASE")
+	id("io.spring.dependency-management") version("1.0.12.RELEASE")
 }
 
 group = "com.my"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_18
+	targetCompatibility = JavaVersion.VERSION_18
 }
 
 tasks.withType<KotlinCompile> {
         kotlinOptions {
-                jvmTarget = "17"
+                jvmTarget = "18"
                 freeCompilerArgs = listOf("-Xjsr305=strict")
         }
 }
 
 tasks.withType<JavaCompile> {
-	options.release.set(17)
+	options.release.set(18)
 }
 
 repositories {
