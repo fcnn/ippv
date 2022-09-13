@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
 	extra.apply {
-		set("kotlinVersion", "1.7.10")
+		set("kotlinVersion", "1.7.20-RC")
 	}
 
 	repositories {
@@ -20,15 +20,15 @@ plugins {
 	id("java")
 	id("application")
 	kotlin("jvm") version("${property("kotlinVersion")}")
-	id("io.spring.dependency-management") version("1.0.12.RELEASE")
+	id("io.spring.dependency-management") version("1.0.13.RELEASE")
 }
 
 group = "com.my"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_18
-	targetCompatibility = JavaVersion.VERSION_18
+	sourceCompatibility = JavaVersion.VERSION_19
+	targetCompatibility = JavaVersion.VERSION_19
 }
 
 tasks.withType<KotlinCompile> {
@@ -39,7 +39,7 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<JavaCompile> {
-	options.release.set(18)
+	options.release.set(19)
 }
 
 repositories {
@@ -58,6 +58,6 @@ dependencies {
 }
 
 tasks.wrapper {
-	gradleVersion = "7.5"
+	gradleVersion = "7.5.1"
 	distributionType = Wrapper.DistributionType.ALL
 }
