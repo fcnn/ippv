@@ -32,10 +32,10 @@ dependencies {
 }
 
 application {
-	mainClassName = "com.y.ippv.Main"
+	//mainClassName = "com.y.ippv.Main"
 }
 
 tasks.wrapper {
-  gradleVersion = "7.5.1"
+  gradleVersion = "8.0-miltestone-1"
   distributionType = Wrapper.DistributionType.ALL
 }
