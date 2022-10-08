@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
 	extra.apply {
-		set("kotlinVersion", "1.7.20-RC")
+		set("kotlinVersion", "1.7.20")
 	}
 
 	repositories {
@@ -20,7 +20,7 @@ plugins {
 	id("java")
 	id("application")
 	kotlin("jvm") version("${property("kotlinVersion")}")
-	id("io.spring.dependency-management") version("1.0.13.RELEASE")
+	id("io.spring.dependency-management") version("1.0.14.RELEASE")
 }
 
 group = "com.my"
@@ -50,7 +50,7 @@ repositories {
 }
 
 application {
-	mainClassName = "com.y.ippv.MainKt"
+	//mainClassName = "com.y.ippv.MainKt"
 }
 
 dependencies {
@@ -58,6 +58,6 @@ dependencies {
 }
 
 tasks.wrapper {
-	gradleVersion = "7.5.1"
+	gradleVersion = "8.0-milestone-1"
 	distributionType = Wrapper.DistributionType.ALL
 }
