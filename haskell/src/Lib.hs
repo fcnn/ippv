@@ -3,7 +3,7 @@ module Lib (
     someFunc
 ) where
 
---import Control.Monad.Writer
+import Control.Monad.Writer
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
