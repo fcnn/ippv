@@ -8,5 +8,5 @@ module Lib (
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
 
-f :: Int -> Int
-f x = x + 1
+f :: a -> a
+f x = x
