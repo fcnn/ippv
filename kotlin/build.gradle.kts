@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
 	extra.apply {
-		set("kotlinVersion", "1.7.21")
+		set("kotlinVersion", "1.8.0-Beta")
 	}
 
 	repositories {
@@ -33,7 +33,7 @@ java {
 
 tasks.withType<KotlinCompile> {
         kotlinOptions {
-                jvmTarget = "18"
+                jvmTarget = "19"
                 freeCompilerArgs = listOf("-Xjsr305=strict")
         }
 }
